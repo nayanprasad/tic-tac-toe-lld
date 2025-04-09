@@ -27,6 +27,10 @@ public class Game {
         this.moves = new ArrayList<>();
     }
 
+    public boolean checkWin() {
+        return this.winningStrategy.checkWin(board, moves.get(moves.size() - 1));
+    }
+
     public void switchPlayer() {
         int currPlayerIndex = players.indexOf(nextPlayer);
         int nextPlayerIndex = (currPlayerIndex + 1) % players.size();

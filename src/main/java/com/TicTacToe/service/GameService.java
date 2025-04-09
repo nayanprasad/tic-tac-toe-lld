@@ -54,7 +54,7 @@ public class GameService {
 
             game.addMove(move);
 
-            if(game.getWinningStrategy().checkWin(game.getBoard(), move)) {
+            if(game.checkWin()) {
                 game.setGameStatus(GameStatus.PLAYER_WON);
                 game.setWinner(game.getNextPlayer());
                 return true;
